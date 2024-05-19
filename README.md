@@ -53,6 +53,6 @@ $$ sudo systemctl start jenkins
 
    
 * $$ sudo apt-get update
-* $$ sudo apt-get install fontconfig openjdk-17-jre
+* $$ sudo apt-get install fontconfig openjdk-11-jre
 * $$ sudo apt-get install jenkins
   
