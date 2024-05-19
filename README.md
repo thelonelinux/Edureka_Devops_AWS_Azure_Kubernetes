@@ -34,3 +34,7 @@ Now, let’s enable Jenkins to start on boot and start the service:
 
 $$ sudo systemctl enable jenkins
 $$ sudo systemctl start jenkins
+
+
+# If above steps won't help then follow this link steps
+* https://pkg.jenkins.io/debian-stable/
