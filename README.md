@@ -41,5 +41,5 @@ $$ sudo systemctl start jenkins
 * Once the install is complete in java17 in above link steps. Now you need to add java 11
 * so run this scripts
 * sudo apt-get update
-* sudo apt-get install fontconfig openjdk-17-jre
+* sudo apt-get install fontconfig openjdk-11-jre
 * sudo apt-get install jenkins
