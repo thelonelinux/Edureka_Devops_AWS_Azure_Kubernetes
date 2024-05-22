@@ -68,5 +68,6 @@ To check the Jenkins version, use the following command:
 
 * $$ sudo systemctl enable jenkins
 * $$ sudo systemctl start jenkins
+* $$ sudo systemctl start jenkins   (To Check Whether Jenkins is running or not)
 
   
