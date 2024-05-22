@@ -62,11 +62,11 @@ To check the Jenkins version, use the following command:
 
 ## Enabling or starting of jenkins
 
-$$ jenkins --version
-Step 5: Enable and Start Jenkins
-Now, let’s enable Jenkins to start on boot and start the service:
+* $$ jenkins --version
+* Step 5: Enable and Start Jenkins
+* Now, let’s enable Jenkins to start on boot and start the service:
 
-$$ sudo systemctl enable jenkins
-$$ sudo systemctl start jenkins
+* $$ sudo systemctl enable jenkins
+* $$ sudo systemctl start jenkins
 
   
