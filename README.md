@@ -1,8 +1,17 @@
 # Edureka_Devops_AWS_Cloud
-Learning about Devops, mostly in Amazon AWS in cloud
+Learning about DevOps, mostly in Amazon AWS in the cloud
+
+## Steps to get started
+### 1. Get an AWS free or Paid Account. For a Free or Paid Account You can check any YouTube videos, there it is explained.
+### 2. Once the account is created. You can start with the AWS Instance Creation. An instance is created on the Cloud, You can choose any OS, etc, and create an EC2 Instance. Steps you can check in Youtube
+### 3. Once the instance is created, connect that instance and open AWS CLI. It is usually like Ubuntu Terminal only if you have chosen Ubuntu as the OS when creating the instance. 
+### 4. Now we will install Jenkins, which is a third party for AWS, it is not pre-installed there. for that, you need to type some below commands. However, AWS has its own Jenkins-like features called, CodeCommit, CodeBuild, and CodeDeploy.
+### 5. The code commit is AWS GitHub like Bitbucket for Atlassian. But let's do Jenkins for now. As they are all paid service.
+### 6. Jenkins is free, but you have to use GitHub to get the latest code for deployment and build jobs. However, CodeCommit CodeBuild and CodeDeploy are paid services of AWS and we don't need GitHub or Jenkins if we have access to these services.
+### 7. CodeBuild, CodeCommit, and CodeDeploy services are accessible for free or paid only if you log in as an AMI user, instead of a root user, when logging into AWS.
 
 
-# About installing Jenkins in Amazon EC2 Instance in Ubuntu Image.
+## About installing Jenkins in Amazon EC2 Instance in Ubuntu Image.
 * https://medium.com/@shahid199578/installing-jenkins-on-an-ec2-machine-d2e741a07785
 
 Step 1: Create an EC2 Instance
@@ -28,15 +37,8 @@ $$ sudo apt-get update
 $$ sudo apt-get install jenkins
 To check the Jenkins version, use the following command:
 
-$$ jenkins --version
-Step 5: Enable and Start Jenkins
-Now, let’s enable Jenkins to start on boot and start the service:
 
-$$ sudo systemctl enable jenkins
-$$ sudo systemctl start jenkins
-
-
-# If above steps won't help then follow this link steps
+## If the above steps won't help then follow this link steps
 * https://pkg.jenkins.io/debian-stable/
 * Jenkins Debian Packages
 * 
@@ -55,4 +57,14 @@ $$ sudo systemctl start jenkins
 * $$ sudo apt-get update
 * $$ sudo apt-get install fontconfig openjdk-11-jre
 * $$ sudo apt-get install jenkins
+
+## Enabling or starting of jenkins
+
+$$ jenkins --version
+Step 5: Enable and Start Jenkins
+Now, let’s enable Jenkins to start on boot and start the service:
+
+$$ sudo systemctl enable jenkins
+$$ sudo systemctl start jenkins
+
   
