@@ -70,4 +70,11 @@ To check the Jenkins version, use the following command:
 * $$ sudo systemctl start jenkins
 * $$ sudo systemctl start jenkins   (To Check Whether Jenkins is running or not)
 
+* Once the Jenkins is active and running. You copy the Public IP Address provided in your EC2 Instance.
+* And since by default Jenkins runs in 8080 Port. so browse this way => http://3.111.47.192:8080
+* But if somewhow the port won't opens, then you need to do some settings in security groups and enable this port (Inbound Port)
+* Just click on Security Group Launch wizard, in inbound rules, do edit, and then add TCP, add PORT 8080, and then 0/0000 only then save.
+* video step you can see in this Youtube link : https://www.youtube.com/watch?v=lRpS2CovMrs&t=623s&ab_channel=DSwithBappy
+* Once the setup is done. You can re-open the jenkins port on 8080, and it will work fine and jenkins dashboard opens up. => http://3.111.47.192:8080
+
   
