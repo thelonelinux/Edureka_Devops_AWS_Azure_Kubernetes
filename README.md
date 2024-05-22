@@ -5,7 +5,7 @@ Learning about DevOps, mostly in Amazon AWS in the cloud
 #### 1. Get an AWS free or Paid Account. For a Free or Paid Account You can check any YouTube videos, there it is explained.
 #### 2. Once the account is created. You can start with the AWS Instance Creation. An instance is created on the Cloud, You can choose any OS, etc, and create an EC2 Instance. Steps you can check in Youtube
 #### 3. Once the instance is created, connect that instance and open AWS CLI. It is usually like Ubuntu Terminal only if you have chosen Ubuntu as the OS when creating the instance. 
-#### 4. Now we will install Jenkins, which is a third party for AWS, it is not pre-installed there. for that, you need to type some below commands. However, AWS has its own Jenkins-like features called, CodeCommit, CodeBuild, and CodeDeploy.
+#### 4. Now we will install Jenkins, Jenkins are used to create PIPELINE(Sub-Jobs) for CI/CD. Jenkins is a third party for AWS, it is not pre-installed there. for that, you need to type some below commands. However, AWS has its own Jenkins-like features called, CodeCommit, CodeBuild, and CodeDeploy.
 #### 5. The code commit is AWS GitHub like Bitbucket for Atlassian. But let's do Jenkins for now. As they are all paid service.
 #### 6. Jenkins is free, but you have to use GitHub to get the latest code for deployment and build jobs. However, CodeCommit CodeBuild and CodeDeploy are paid services of AWS and we don't need GitHub or Jenkins if we have access to these services.
 #### 7. CodeBuild, CodeCommit, and CodeDeploy services are accessible for free or paid only if you log in as an AMI user, instead of a root user, when logging into AWS.
