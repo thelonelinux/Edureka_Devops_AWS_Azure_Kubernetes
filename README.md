@@ -78,3 +78,16 @@ To check the Jenkins version, use the following command:
 * Once the setup is done. You can re-open the jenkins port on 8080, and it will work fine and jenkins dashboard opens up. => http://3.111.47.192:8080
 
   
+## Getting Started with Jenkins
+* Once you are able to open the Jenkins in browser.
+* You will get prompt for password.
+* copy that and do this command in EC2 CLI
+* ubuntu@ip-172-31-1-121:~$ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+* 4f84e9013d0c41e4988ae2815179f667 (You will get Password like this)
+* Use that password and login and you will get logged in.
+* After login you can install suggested plugins options.
+
+
+
+
+
