@@ -86,6 +86,8 @@ To check the Jenkins version, use the following command:
 * 4f84e9013d0c41e4988ae2815179f667 (You will get Password like this)
 * Use that password and login and you will get logged in.
 * After login you can install suggested plugins options.
+* After that you create username and password, and then save and continue and then start with jenkins. hence done.
+* So this is how you set up jenkins in AWS instance.
 
 
 
