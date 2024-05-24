@@ -89,7 +89,10 @@ To check the Jenkins version, use the following command:
 * After that you create username and password, and then save and continue and then start with jenkins. hence done.
 * So this is how you set up jenkins in AWS instance.
 
-
+## Jenkins as Continous Integration Tool
+* This tool has capability to create Job used for Continous Integration. Jobs with some rules and components.
+* Example, Jenkins communicate with code and do compilation, do build and do testcases testing etc.
+* Jobs like :   ( 1. Compile  =>   2. Build  =>  3. Testing  =>  ..    => Package Prepared )  after the package is prepared in CI, then comes CD (Continous deployment)
 
 
 
