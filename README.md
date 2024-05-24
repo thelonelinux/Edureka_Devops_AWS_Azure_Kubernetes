@@ -93,6 +93,10 @@ To check the Jenkins version, use the following command:
 * This tool has capability to create Job used for Continous Integration. Jobs with some rules and components.
 * Example, Jenkins communicate with code and do compilation, do build and do testcases testing etc.
 * Jobs like  (Steps of SDLC) :   ( 1. Compile  =>   2. Build  =>  3. Testing  =>  ..    => Package Prepared )  after the package is prepared in CI, then comes CD (Continous deployment)
+* So our goals are like to create [1. Compile => 2. Code Review => 3. Unit Test => 4. metric Test => 5. package and then finally 6. Deploy]
+* In Maven Related Project : pom.xml file will contain details like which all job is required, if in case devops team is not sure of dependencies and compile tool and testcases.
+* Cobertura dependency is used for Unit Teting.
+### Creating Jobs in Jenkins
 
 
 
