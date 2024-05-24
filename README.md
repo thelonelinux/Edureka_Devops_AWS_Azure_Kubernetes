@@ -92,7 +92,7 @@ To check the Jenkins version, use the following command:
 ## Jenkins as Continous Integration Tool
 * This tool has capability to create Job used for Continous Integration. Jobs with some rules and components.
 * Example, Jenkins communicate with code and do compilation, do build and do testcases testing etc.
-* Jobs like :   ( 1. Compile  =>   2. Build  =>  3. Testing  =>  ..    => Package Prepared )  after the package is prepared in CI, then comes CD (Continous deployment)
+* Jobs like  (Steps of SDLC) :   ( 1. Compile  =>   2. Build  =>  3. Testing  =>  ..    => Package Prepared )  after the package is prepared in CI, then comes CD (Continous deployment)
 
 
 
