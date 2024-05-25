@@ -121,6 +121,8 @@ To check the Jenkins version, use the following command:
 * ubuntu@ip-172-31-1-121:/var/lib/jenkins/workspace$ ls
 * addressbook  addressbookCompile
 * For testCases job Junit etc. you need to add that also in the code in github. In above addressbook url test code are also added.
+* 
+* -----------      THIS IS ALL UPTO CLASS 4 RECORDING IN DEVOPS EDUREKA TRAINING    --------
 
 
 
