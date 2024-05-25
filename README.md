@@ -123,6 +123,15 @@ To check the Jenkins version, use the following command:
 * For testCases job Junit etc. you need to add that also in the code in github. In above addressbook url test code are also added.
 * 
 * -----------      THIS IS ALL UPTO CLASS 4 RECORDING IN DEVOPS EDUREKA TRAINING    --------
+* 
+
+### CLASS 5 RECORDINGS (WE WILL BE CREATING MORE JOBS IN JENKINS LIKE, COMPILE, CODE REVIEW,  TEST, METRIC TEST, PACKAGE AND THEN DEPLOY)
+* In Jenkins, click on (+) New Item, name the job as "addressbookCodeReview" and then select "FreeStyleProject" as freeStyleProject is the generic one.
+* FreeStyle project will give you all the options in configuration.
+* List of all configuration :
+* 1. Description : Just add the job description (Any random text)
+  2. Multiselectors (Discard old build => will help to keep code clean). (Git => helps to select git repo). (Parameterized => Just a feature if your project needs parameter to run). (Throttle build => Prioritize the jobs). (Execute concurrent builds => so it will build concurrently. other users also can push the changes and build)
+* 
 
 
 
