@@ -129,9 +129,13 @@ To check the Jenkins version, use the following command:
 * In Jenkins, click on (+) New Item, name the job as "addressbookCodeReview" and then select "FreeStyleProject" as freeStyleProject is the generic one.
 * FreeStyle project will give you all the options in configuration.
 * List of all configuration :
-* 1. Description : Just add the job description (Any random text)
+* 1. Description : Just add the job description (Any random text) (This job is for code review)
   2. Multiselectors (Discard old build => will help to keep code clean). (Git => helps to select git repo). (Parameterized => Just a feature if your project needs parameter to run). (Throttle build => Prioritize the jobs). (Execute concurrent builds => so it will build concurrently. other users also can push the changes and build)
-* 
+* 3. Git, we know. Here also again add that same repo for which you are doing code review.
+* 4. Build Triggers : Multiple Selection (1. Trigger build remotely: This means you can do build via script or use webhooks. then you can do that here) (2. Build after other job is built : So this is dependency on other jobs. like in pipeline or if some other projects jobs). (3. Build Periodically : If you want to build after every 15 mins etc. ). (4. Git Hook : like webhoook). (5. Poll : means based on criteria. like when any code changes then only build). So this are all the options to do build based on different criterias etc.
+* So in Build Triggers : Select Build after other build and inner select build only when the build is stable. As in this way when we run the compile job then after that codeReview of addressbook job will be also triggered in sequence in this pipeline. So in projects to watch add your previous compile job ("addressbookCompile").
+* In build steps in top-level maven target : Now in maven also there is an option to define goal. you can chose (pmd:pmd) plugins. This will create a  side report. Such more jobs role are there for maven. you can check in google.
+* So now build the addressbookCompile job only, then you will see once the addressbookCompile job is successfully executed, then addressbookCodeReview will also get executed.
 
 
 
