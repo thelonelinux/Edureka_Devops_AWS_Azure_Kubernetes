@@ -52,8 +52,8 @@ Learning about DevOps, mostly in Amazon AWS in the cloud
 * Just follow below steps
     *  click on Security Group Launch wizard, (Security Menu) you will find that in dashboard in your selected  ec2 instance only, where all details are specified.
     *  Go to inbound rules, do edit, and then add TCP (Custom TCP), add PORT 8080, and then 0/0000 only then save.
-    *  Once the setup is done. You can re-open the jenkins port on 8080 in port range, anywhere and other fill 0/000
-    * Now our port 8080 is setup and now our jenkins will work fine and jenkins dashboard opens up. => http://3.111.47.192:8080
+    *  Once the setup is done. You can re-open the jenkins port on 8080 in port range, anywhere and other fill 0/000 and then click save rules.
+    *  Now our port 8080 is setup and now our jenkins will work fine and jenkins dashboard opens up. => http://3.111.47.192:8080
 * video step you can see in this Youtube link : https://www.youtube.com/watch?v=lRpS2CovMrs&t=623s&ab_channel=DSwithBappy
 
 
