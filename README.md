@@ -234,7 +234,11 @@ Learning about DevOps, mostly in Amazon AWS in the cloud
 * So now you can see the same pipeline in the form of cards.
 * So this is good to see how code progress, this is only for demonstration. So run it and you can see. So that's all it.
 * QnAs time.
-* 
+
+#### SCM Polling
+* This you can add in addressbookCompile job.
+* for three minutes in configuration add. click on Poll SCM Options in configure and in box add this "H/3****". 
+* this will check your git code changes after every 3 mins. And if there is any code changes, it will build all over again.
 
 ## Code Deployment
 * So now the jar/war file is created in the Job addressbookPackage. Now we need to deploy it.
