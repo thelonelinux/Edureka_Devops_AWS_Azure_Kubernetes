@@ -77,22 +77,28 @@ Learning about DevOps, mostly in Amazon AWS in the cloud
 * In Maven Related Project : pom.xml file will contain details like which all job is required, if in case devops team is not sure of dependencies and compile tool and testcases.
 * Cobertura dependency is used for Unit Teting.
 ### Creating Jobs in Jenkins
-* https://www.youtube.com/watch?v=8RIFmoWPbhQ&ab_channel=CodersPlace
+* Can follow below youtube for quick steps
+   * https://www.youtube.com/watch?v=8RIFmoWPbhQ&ab_channel=CodersPlace
+##### Let's create Compile job for our project AddressBook
 * Step 1 : Goto Jenkins, click on left menus (+) icon for new job
-* Step 2 : Name your job as addressbookCompile, select FreeStyle project and submit
-* Step 3 : Put this project in git as repository url : https://github.com/htshshrm2/MyAddressbook (https://github.com/htshshrm2/MyAddressbook.git) This you will get when you do clone link for that project. We don't need credentials here as it is public repo.
+* Step 2 : Name your job as addressbookCompile, select FreeStyle project and submit.
+* Step 3 : Put this project in git as repository url : https://github.com/htshshrm2/MyAddressbook
+   * You should better use this link : https://github.com/htshshrm2/MyAddressbook.git
+   * This link you will get when you do clone link for that project. We don't need credentials here as it is public repo.
 * Step 4 : Keep branch by default master only : */master
-* Also install git in your Ec2 instance. Else it will give error for git when you put url. Also they are uusally installed
+* Also install git in your Ec2 instance. Else it will give error for git when you put url. Also they are usually installed
 * Webhook you can update in your github repo from setting, this will make sure that whenever code changes happens, code will be automatically synced in jenkins as well.
-* For Java Project you have to install maven, you can find that in Jenkins only when creating the build job.
-* Devops can use any programming language and then you can install tools accordingly like for java we need maven to build and for .net nuget tools etc.
-* Tool installation option is in Jenkins,in Manage Jenkins,goto Tools, there you can check and install.
-* Just select maven and also select version you required and then save it.
-* Now goto job configuration setting in prebuild (BuildStep) chose top level maven target and select maven so that it will know that maven in required for this.
-* After this also add goal as "compile".
-* Please select goals as one of this only, and they should be in same case as mentioned below else it will give error
-* Available lifecycle phases are: pre-clean, clean, post-clean, validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy, pre-site, site, post-site, site-deploy
-* Now once you build the project, you can see in console that maven is getting installed in jenkins node.
+* Step 5 For Java Project you have to install maven, you can find that in Jenkins only when creating the build job.
+   * Devops can use any programming language and then you can install tools accordingly like for java we need maven to build and for .net nuget tools etc.
+      * Tool installation option is in Jenkins,in Manage Jenkins,goto Tools, there you can check and install.
+      * Just select maven and also select version you required and then save it.
+      * Now goto job configuration setting in prebuild (BuildStep) chose top level maven target and select maven so that it will know that maven in required for this.
+      * After this also add goal as "compile".
+      * Please select goals as one of this only, and they should be in same case as mentioned below else it will give error
+      * Available lifecycle phases are: pre-clean, clean, post-clean, validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes,
+      *  generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package,
+      *  pre-integration-test, integration-test, post-integration-test, verify, install, deploy, pre-site, site, post-site, site-deploy
+* Now if you build the project, you can see in console that maven is getting installed in jenkins node.
 * Right now JDK is not required in the tools. So leave it for now. Else you can chose and add java home for selected jdk, in automatica installer only latest will get added.
 * Once the build is done. they (maven) will be automatically get installed once the build is done. You can see in console.
 * Once the build is successful, the job gets created successfull.
