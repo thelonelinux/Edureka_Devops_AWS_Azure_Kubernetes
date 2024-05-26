@@ -245,4 +245,6 @@ Learning about DevOps, mostly in Amazon AWS in the cloud
 * So we need to create another job i.e. deploy job after package job.
 * Also to deploy that project package we need an environment to deploy that package. (Dev / QA / UAT / Prod) Environment.
 
+* -----------  END OF CLASS 5 RECORDING ----------------------
+
 
