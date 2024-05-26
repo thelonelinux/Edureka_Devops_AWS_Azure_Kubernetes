@@ -92,7 +92,7 @@ Learning about DevOps, mostly in Amazon AWS in the cloud
 * So our goals are like to create [1. Compile => 2. Code Review => 3. Unit Test => 4. metric Test => 5. package and then finally 6. Deploy]
 * In Maven Related Project : pom.xml file will contain details like which all job is required, if in case devops team is not sure of dependencies and compile tool and testcases.
 * Cobertura dependency is used for Unit Teting.
-### Creating Jobs in Jenkins
+### Creating Jobs in Jenkins (JOBS AND THEIR GOALS ARE DEFINED IN POM.XML FILE ONLY. THIS IS FOR JAVA. FOR OTHER LIKE IN DOTNET WE WILL HAVE SOME OTHER FILE OR WE HAVE TO DISCUSS WITH DEVELOPER WHAT JOB AND GOAL TO USE)
 * Can follow below youtube for quick steps
    * https://www.youtube.com/watch?v=8RIFmoWPbhQ&ab_channel=CodersPlace
 ##### Let's create Compile job for our project AddressBook
