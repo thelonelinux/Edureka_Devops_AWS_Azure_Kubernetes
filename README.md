@@ -13,70 +13,49 @@ Learning about DevOps, mostly in Amazon AWS in the cloud
 ----------------------------------------------
 <br><br/>
 
-## About installing Jenkins in Amazon EC2 Instance in Ubuntu Image.
+## Installing Jenkins in Amazon EC2 Instance in Ubuntu Image.
 * https://medium.com/@shahid199578/installing-jenkins-on-an-ec2-machine-d2e741a07785
 
-Step 1: Create an EC2 Instance
-create and connect to an EC2 instance. If you’re not familiar with how to create and connect to an EC2 instance, you can refer to “How to Create and Connect to an EC2 Instance,” for detailed step-by-step instructions. Once you have your EC2 instance ready, you can continue with the installation of Jenkins.
+* Step 1: Create an EC2 Instance
+    * create and connect to an EC2 instance. If you’re not familiar with how to create and connect to an EC2 instance,
+    * You can refer to “How to Create and Connect to an EC2 Instance,” for detailed step-by-step instructions.
+    * Once you have your EC2 instance ready, you can continue with the installation of Jenkins.
 
-Step 2: Install Java
-Jenkins is built on Java, so we need to install it first. Open a terminal and run the following command:
+* Step 2: Install Java (java 11 required for jenkins)
+    * Jenkins is built on Java, so we need to install it first. Open a terminal and run the following command:
 
-$$ sudo apt-get install openjdk-11-jre
-To confirm that Java is installed correctly, check its version with:
-
-$$ java --version
-Step 3: Update the System
-To ensure that your Ubuntu server is up to date, run the following command:
-
-$$ sudo apt-get update
-Step 4: Installing Jenkins
-Now, let’s install Jenkins. Use the following commands:
-
-$$ wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
-$$ sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
-$$ sudo apt-get update
-$$ sudo apt-get install jenkins
-To check the Jenkins version, use the following command:
-
-
-## If the above steps won't help then follow this link steps
-* https://pkg.jenkins.io/debian-stable/
-* Jenkins Debian Packages
-* 
+* Step 3: Installing Jenkins after java 11. check the following commands
+* https://pkg.jenkins.io/debian-stable/ (This is website where you can find commands)
+  
+* Jenkins Debian Packages  
 * This is the Debian package repository of Jenkins to automate installation and upgrade. To use this repository, first add the key to your system (for the Weekly Release Line):
-
-    
- * $$ sudo wget -O /usr/share/keyrings/jenkins-keyring.asc  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+    * $$ sudo wget -O /usr/share/keyrings/jenkins-keyring.asc  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
   
 * Then add a Jenkins apt repository entry:
-    
-* $$  echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]"     https://pkg.jenkins.io/debian-stable binary/ | sudo tee     /etc/apt/sources.list.d/jenkins.list  /dev/null
+    * $$  echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]"     https://pkg.jenkins.io/debian-stable binary/ | sudo tee     /etc/apt/sources.list.d/jenkins.list  /dev/null
   
 * Update your local package index, then finally install Jenkins:
+    * $$ sudo apt-get update
+    * $$ sudo apt-get install fontconfig openjdk-11-jre
+    * $$ java --version
+    * $$ sudo apt-get install jenkins
 
-   
-* $$ sudo apt-get update
-* $$ sudo apt-get install fontconfig openjdk-11-jre
-* $$ java --version
-* $$ sudo apt-get install jenkins
-
-## Enabling or starting of jenkins
-
-* $$ jenkins --version
-* Step 5: Enable and Start Jenkins
-* Now, let’s enable Jenkins to start on boot and start the service:
-
-* $$ sudo systemctl enable jenkins
-* $$ sudo systemctl start jenkins
-* $$ sudo systemctl status jenkins   (To Check Whether Jenkins is running or not)
+* Step 4 : Enabling or starting of jenkins
+    * $$ jenkins --version
+    * $$ sudo systemctl enable jenkins
+    * $$ sudo systemctl start jenkins
+    * $$ sudo systemctl status jenkins   (To Check Whether Jenkins is running or not)
 
 * Once the Jenkins is active and running. You copy the Public IP Address provided in your EC2 Instance.
 * And since by default Jenkins runs in 8080 Port. so browse this way => http://3.111.47.192:8080
 * But if somewhow the port won't opens, then you need to do some settings in security groups and enable this port (Inbound Port)
-* Just click on Security Group Launch wizard, in inbound rules, do edit, and then add TCP, add PORT 8080, and then 0/0000 only then save.
+* Just follow below steps
+    *  click on Security Group Launch wizard, (Security Menu) you will find that in dashboard in your selected  ec2 instance only, where all details are specified.
+    *  Go to inbound rules, do edit, and then add TCP (Custom TCP), add PORT 8080, and then 0/0000 only then save.
+    *  Once the setup is done. You can re-open the jenkins port on 8080 in port range, anywhere and other fill 0/000
+    * Now our port 8080 is setup and now our jenkins will work fine and jenkins dashboard opens up. => http://3.111.47.192:8080
 * video step you can see in this Youtube link : https://www.youtube.com/watch?v=lRpS2CovMrs&t=623s&ab_channel=DSwithBappy
-* Once the setup is done. You can re-open the jenkins port on 8080, and it will work fine and jenkins dashboard opens up. => http://3.111.47.192:8080
+
 
   
 ## Getting Started with Jenkins
