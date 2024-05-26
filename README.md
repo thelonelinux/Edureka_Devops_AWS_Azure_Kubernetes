@@ -158,6 +158,43 @@ Learning about DevOps, mostly in Amazon AWS in the cloud
 * goal in maven add as : "package"
 
 #### Now once all this jobs are created, You can start build of addressbookCompile job, You will see other jobs will also run in sequence.
+* Also once you run the build might failed at addressbookMetrictest. as it also needs JDK 8 to run.  But we have JDK 11  in our instance installed when we installed jenkins.
+* So now we need to use JDK 8.
+* So to install JDK 8 in Jekins. Goto Manage Jenkins, Goto Tools, JDK Installations, Add JDK name as "jdk8" In the JAVA_HOME first we need to install JDK in backend in EC2 Instance
+* So goto EC2 Terminal and run command
+* $$ sudo apt-get install fontconfig openjdk-8-jre   (Since this command didnot showed java 8 on doing java --version, it was 11  only it showed)
+* $$ sudo apt install openjdk-8-jdk  (so running this command to  get jdk 8) (Was still showing java 11)
+* $$ sudo update-alternatives --config java (to check wihch all java versions are there in your system and at what path they are present)
+* root@ip-172-31-41-107:~# sudo update-alternatives --config java
+* There are 2 choices for the alternative java (providing /usr/bin/java).
+
+ *  Selection    Path                                            Priority   Status
+* ------------------------------------------------------------
+* * 0            /usr/lib/jvm/java-11-openjdk-amd64/bin/java      1111      auto mode (Here star means this is default)
+*  1            /usr/lib/jvm/java-11-openjdk-amd64/bin/java      1111      manual mode
+*  2            /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java   1081      manual mode
+
+*  so from here you can chose path "/usr/lib/jvm/java-8-openjdk-amd64" and put in that JAVA_HOME in addressbookMetrictest and run the whole build again.
+*  Now once this is added, save it
+*  Now go in addressbookMetricTest and define  there this JDK
+*  Goto Build Steps, Advance, In JVM Option add "jdk8" which you added in the tools. same name only add and then save.
+*  BUT still it got failed with main file load error. So now this time We will make java 2 in above list as default one. that is java 8 as default preesnt in 2nd position in the list.
+*  So for that run the command
+*  $$ sudo update-alternatives --config java
+*  After you run this command you will get invoke to chose the default jdk
+* $$ => Press <enter> to keep the current choice[*], or type selection number: 2
+* $$ => update-alternatives: using /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java to provide /usr/bin/java (java) in manual mode
+* root@ip-172-31-41-107:~# sudo update-alternatives --config java
+* There are 2 choices for the alternative java (providing /usr/bin/java).
+
+*  Selection    Path                                            Priority   Status
+* ------------------------------------------------------------
+*  0            /usr/lib/jvm/java-11-openjdk-amd64/bin/java      1111      auto mode
+*  1            /usr/lib/jvm/java-11-openjdk-amd64/bin/java      1111      manual mode
+** 2            /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java   1081      manual mode (Here star means this is default)
+
+* Now since we have made java jdk 8 as our default. so we don't have to any more add jdk tool and hence now we can remove jdk8 in Build Steps from addressbookMetrictest job
+* Now after removing it and re-run the jobs. This time everything will work fine.
 
 
 
