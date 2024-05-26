@@ -79,7 +79,7 @@ Learning about DevOps, mostly in Amazon AWS in the cloud
 ### Creating Jobs in Jenkins
 * https://www.youtube.com/watch?v=8RIFmoWPbhQ&ab_channel=CodersPlace
 * Step 1 : Goto Jenkins, click on left menus (+) icon for new job
-* Step 2 : Name your job as AddressBookCompile, select FreeStyle project and submit
+* Step 2 : Name your job as addressbookCompile, select FreeStyle project and submit
 * Step 3 : Put this project in git as repository url : https://github.com/htshshrm2/MyAddressbook (https://github.com/htshshrm2/MyAddressbook.git) This you will get when you do clone link for that project. We don't need credentials here as it is public repo.
 * Step 4 : Keep branch by default master only : */master
 * Also install git in your Ec2 instance. Else it will give error for git when you put url. Also they are uusally installed
