@@ -1,5 +1,7 @@
 # This is for AWS Devops Training (Only AWS tools)
 
+## Pre-requisite : AWS Free tier Account (If You can't afford the paid ones) better get free tier only for now
+
 ## Orientation Class : This is just for how Masters Program like
 * Pros and cons of attending this program
 * Certification you can go for after this program
@@ -23,3 +25,11 @@
   * Open Source Devops Tools : Jenkins (CICD), Ansible, Docker, Kubernetes, Terraform, Prometheus, Graffana, JFrog
   * Managed Services (Not Open Source Devops Tools) : AWS,  Azure,  GCP
     * AWS : AWS CodeCommit/CodePipeLine/CodeBuild/CodeDeploy/CodeArtifacts/CodeStar/CodeGuru
+* Devops Team :
+  * Devops Associate : Sr. Devops Associate
+  * Devops Engineer : Sr Devops Engineer
+  * Devops Lead : Sr. Devops Lead
+  * Devops Architect : Sr. Devops Architecture
+  * Devops Consultant : Sr. Devops Consultant
+ 
+* Scripting Language : Shell/Python/Yaml/Json/Groovy/Python
