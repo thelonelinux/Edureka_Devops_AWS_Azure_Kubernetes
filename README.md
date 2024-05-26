@@ -81,7 +81,7 @@ Learning about DevOps, mostly in Amazon AWS in the cloud
 * ubuntu@ip-172-31-1-121:~$ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 * 4f84e9013d0c41e4988ae2815179f667 (You will get Password like this)
 * Use that password and login and you will get logged in.
-* After login you can install suggested plugins options.
+* After login you can install suggested plugins options. hERE ONLY GIT IS ALSO GOT INSTALLED. CHOSE SUGGESTED PLUGINS
 * After that you create username and password, and then save and continue and then start with jenkins. hence done.
 * So this is how you set up jenkins in AWS instance.
 
