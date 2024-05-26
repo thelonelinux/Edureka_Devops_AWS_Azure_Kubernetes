@@ -3,7 +3,23 @@ Learning about DevOps, mostly in Amazon AWS in the cloud
 
 ## Steps to get started
 #### 1. Get an AWS free or Paid Account. For a Free or Paid Account You can check any YouTube videos, there it is explained.
-#### 2. Once the account is created. You can start with the AWS Instance Creation. An instance is created on the Cloud, You can choose any OS, etc, and create an EC2 Instance. Steps you can check in Youtube
+#### 2. Once the account is created. You can start with the AWS Instance Creation.
+   * An instance is created on the Cloud, You can choose any OS, etc, and create an EC2 Instance.
+   * Steps you can check in Youtube : https://www.youtube.com/watch?v=EXs775-J5zE&ab_channel=GauravSharma
+   * Also you can add Shell Script that you want to run automatically when the EC2 Instance is created.
+   * for that when creating the instance, goto Advance Details, there you goto User Data attribute. There you can add whatever shell script you want to run.
+   * So from here only you can install java and jenkins and start the jenkins. So let's see if it works
+      * sudo wget -O /usr/share/keyrings/jenkins-keyring.asc  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+      * echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]"     https://pkg.jenkins.io/debian-stable binary/ | sudo tee     /etc/apt/sources.list.d/jenkins.list  /dev/null
+      * sudo apt-get update
+      * sudo apt-get install fontconfig openjdk-11-jre
+      * java --version
+      * sudo apt-get install jenkins
+      * jenkins --version
+      * sudo systemctl enable jenkins
+      * sudo systemctl start jenkins
+      * sudo systemctl status jenkins
+   * Looks like Jenkins didn't got installed. so better write manually. check later how userdata is used to run scripts.
 #### 3. Once the instance is created, connect that instance and open AWS CLI. It is usually like Ubuntu Terminal only if you have chosen Ubuntu as the OS when creating the instance. 
 #### 4. Now we will install Jenkins, Jenkins are used to create PIPELINE(Sub-Jobs) for CI/CD. Jenkins is a third party for AWS, it is not pre-installed there. for that, you need to type some below commands. However, AWS has its own Jenkins-like features called, CodeCommit, CodeBuild, and CodeDeploy.
 #### 5. The code commit is AWS GitHub like Bitbucket for Atlassian. But let's do Jenkins for now. As they are all paid service.
@@ -125,12 +141,23 @@ Learning about DevOps, mostly in Amazon AWS in the cloud
 * So now build the addressbookCompile job only, then you will see once the addressbookCompile job is successfully executed, then addressbookCodeReview will also get executed.
 
 ##### addressbookUnittest (Job)
-* Same steps as above. git add. goal describe, dependency on code review give so that it will run once above is run like in pipeline.
-* check what goal to add in maven target
+* Same steps as above.
+*  git add as url
+*  goal describe as "test" in maven goal in invoke top level maven targed,
+*  dependency on code review give so that it will run once above is run like in pipeline.
+* here in build trigger after "addressbookCodeReview" . So add that.
 
 ##### addressbookMetrictest (Job)
 * Same steps as above.
-* goal is some cobertura in maven target
+* here goal in maven target : Add "cobertura:cobertura -Dcobertura.report.format=xml"
+*  here in build trigger after "addressbookUnittest" .So add that.
+
+##### addressbookPackage (Jod)
+* Same as above.
+* build trigger after "addressbookMetrictest"
+* goal in maven add as : "package"
+
+#### Now once all this jobs are created, You can start build of addressbookCompile job, You will see other jobs will also run in sequence.
 
 
 
