@@ -207,6 +207,7 @@ Learning about DevOps, mostly in Amazon AWS in the cloud
 * So for that we can have plugins. so to add more functionalities in jenkins by adding more plugins.
 * so goto jenkins manager, goto plugins, and there search for plugins you required.
 * Also if you want to get report within a job then there was post build attributes in each job.
+* You can add path of this plugins there. in post build report. like for cobertura and junit. Path you can find when you go in workspace of each job where you are adding that plugins.
 
 
 
