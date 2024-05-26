@@ -195,6 +195,18 @@ Learning about DevOps, mostly in Amazon AWS in the cloud
 
 * Now since we have made java jdk 8 as our default. so we don't have to any more add jdk tool and hence now we can remove jdk8 in Build Steps from addressbookMetrictest job
 * Now after removing it and re-run the jobs. This time everything will work fine.
+* 
+
+### Once the build is successful (What to check)
+* You can see in addressbookPackage in workspace, inside the target folder, We have got war file created.
+* Also in addressbookMetrictest. you can see in workspace, there is cobertura report is generated.
+* In build you can see it will say that cobertura report is generated and all that stuffs.
+
+### So now about Plugins In Jenkins
+* So here in each job, you are not getting any job status, report status to report our pipeline.
+* So for that we can have plugins. so to add more functionalities in jenkins by adding more plugins.
+* so goto jenkins manager, goto plugins, and there search for plugins you required.
+* Also if you want to get report within a job then there was post build attributes in each job.
 
 
 
