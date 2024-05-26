@@ -19,3 +19,7 @@
 * SDLC (Software Development Life Cycle)
 * Agile and Waterfall Model
 * Continous Integration and Continous Deployment
+* Devop Tools: 
+  * Open Source Devops Tools : Jenkins (CICD), Ansible, Docker, Kubernetes, Terraform, Prometheus, Graffana, JFrog
+  * Managed Services (Not Open Source Devops Tools) : AWS,  Azure,  GCP
+    * AWS : AWS CodeCommit/CodePipeLine/CodeBuild/CodeDeploy/CodeArtifacts/CodeStar/CodeGuru
