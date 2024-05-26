@@ -205,9 +205,34 @@ Learning about DevOps, mostly in Amazon AWS in the cloud
 ### So now about Plugins In Jenkins
 * So here in each job, you are not getting any job status, report status to report our pipeline.
 * So for that we can have plugins. so to add more functionalities in jenkins by adding more plugins.
-* so goto jenkins manager, goto plugins, and there search for plugins you required.
-* Also if you want to get report within a job then there was post build attributes in each job.
+* so goto jenkins manager, goto plugins, and there search for plugins you required in Available Plungins. If it's not available means it's already installed.
+* Also if you want to get report within a job then there is post build attributes in each job. there you can attach this plugins and provide file targets of htat report.
 * You can add path of this plugins there. in post build report. like for cobertura and junit. Path you can find when you go in workspace of each job where you are adding that plugins.
-
+* So let's add plugins in post build attribute for addressbookUnittest and Junit plugins in it. First check in plugins in manage jenkins if we have this plugins installed.
+* So if it is installed. goto addressbookUnittest, goto postBuild attribute, there select, "publish Junit report"
+* Now select the path of the file, where the report will be generated.
+* so to check this path. goto workspace, there go in target folder, sure-fire reports folder. there you can see 3 xml file starting wiht TEST, so they are our target files paths.
+* so now we already have those test results present there but they are not visible and shown properly.
+* With jenkins plugins, it helps us to read those jenkins plugins along side our pipeling build
+* so in our target path add "target/surefire-reports/*.xml"  (So this * will pick all xml file preesnt in surefire-reports folder) 
+* so now save and build that job. you can see test will show direclty in workspace. (to crosscheck whether this file folders are there you can go in workspace and check)
+* So now once the build is done. click on #Number (Build #), there you can see it will show you test result. so this now you can see the total results and there status there.
+* So now you can see the output files.
+* SO NOW FOR COVERAGE ANALYSIS: We have covertura plugins.
+* so go to manage plugions and install cobertura. This will help to read those output files created in MetricTest job.
+* So go in metricTest job, configure this plugin in post build options, select Publish Cobertura coverage report.
+* And provide the path of the coverage report  : "**/target/site/cobertura/coverage.xml" (so check where this xml file is located with cobertura)as this will be our path required.
+* so put this path, and then build the metrictest job.
+* Once the build is done click on build (#),You can see there it will give you coverage report. so click on coverage report. You will see whole report there.
+* SO NOW THERE IS ANOTHER PLUGIN : BUILD PIPELINE
+* So install this plugin
+* So now create a new view : This is plus icon (+) on the right side of ALL. so click on it
+* Name it as : Addressbook
+* Select radio button : build pipeline view and then create it
+* this will help us to see the pipeline in good format
+* Here chose addressbookCompile as "initial Job" as this is our first job, and then click on OK
+* So now you can see the same pipeline in the form of cards.
+* So this is good to see how code progress, this is only for demonstration. So run it and you can see. So thats all it.
+* QnAs time.
 
 
