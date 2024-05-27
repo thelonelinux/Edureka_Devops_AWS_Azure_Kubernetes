@@ -72,8 +72,19 @@
 * Also work with documentataion
 
 ##### Now In Jenkins also we can install Tom cat server and deploy our package (Check in details in video later)
-* So we have to make two job "addressbookTomCatInstall" and "addressbookDeploy".
+* So we have to make two job "addressbookTomCatInstall" and "addressbookDeploywar".
 * This will run in pipeline after "addressbookPackage".
+* Once it is sucessfully deployed, you can open webiste url and can see your web-page.
+
+##### HANDLERS
+*
+
+##### ANSIBLE ROLES
+*
+
+
+##### QnA
+* 
 
 
 
