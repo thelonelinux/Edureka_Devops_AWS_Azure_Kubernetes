@@ -66,7 +66,14 @@
 * --------------------------------  END of CLASS 6 Recording ---------------------------------
 
 ### CLASS 7 RECORDING STARTS
-* 
+* We will learn how to setup Ansible and in-depth Details
+##### ANSIBLE (Check in details in video later)
+* Install Ansible and then tomCat server in our EC2 CLI and run the servers.
+* Also work with documentataion
+
+##### Now In Jenkins also we can install Tom cat server and deploy our package (Check in details in video later)
+* So we have to make two job "addressbookTomCatInstall" and "addressbookDeploy".
+* This will run in pipeline after "addressbookPackage".
 
 
 
