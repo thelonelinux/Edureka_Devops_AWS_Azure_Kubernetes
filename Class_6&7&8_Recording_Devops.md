@@ -84,7 +84,9 @@
 
 
 ##### QnA
-* 
+* --------------------------------  END of CLASS 7 Recording ---------------------------------
+
+### CLASS 8 RECORDING STARTS
 
 
 
