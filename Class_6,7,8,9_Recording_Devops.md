@@ -65,7 +65,7 @@
 *
 * --------------------------------  END of Lecture 6  ---------------------------------
 
-### CLASS 7 RECORDING STARTS
+## CLASS 7 RECORDING STARTS
 * We will learn how to setup Ansible and in-depth Details
 ##### ANSIBLE (Check in details in video later)
 * Install Ansible and then tomCat server in our EC2 CLI and run the servers.
@@ -86,7 +86,7 @@
 ##### QnA
 * --------------------------------  END of Lecture 7  ---------------------------------
 
-### CLASS 8 RECORDING STARTS
+## CLASS 8 RECORDING STARTS
 ##### CONTAINERIZATION  
 * Let's explain by a scenario : Example we have developer whose code is working fine in his local machine, and then now he push the code deployment in dev, or prod.
 * But sometimes what happens, there is some libraries which is specifically required to run the code, Now operations team deploy it, but it fails. so now this becomes a blame game
@@ -146,7 +146,7 @@
 ##### QnAs
 *  --------------------- END of Lecture 8 ----------------------------------------
 
-### CLASS 9 RECORDING STARTS
+## CLASS 9 RECORDING STARTS
 
 
 
