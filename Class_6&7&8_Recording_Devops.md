@@ -118,7 +118,21 @@
 * check Later
 * here in this google drive linke you can fine commands : https://drive.google.com/drive/u/0/folders/1oDgzHUOvWaxrvUxn2ntLnGzDQYi2bCpF
 
-* Container are by default stored in Memory only
+* Container are by default stored in Memory only. Containers are always live.
+
+##### Running Container in foreground and in Detach Mode (Background)
+* foreground : it will drop you in container
+* Background : it will run in background and you can got in later.
+
+##### DOCKER FILE
+* Commands : RUN, FROM, COPY CMD, EXPOSE. to setup the container and image.
+* Addressbook was dependent on TomCat Image.
+* So we can use that Image only,( or we could have also created new)
+* Also get the war file in the container.
+* So our command will be like
+ * FROM tomcat COPY addressbook.war .... (like this)
+* There is sample image in sir's github : https://github.com/htshshrm2/docker-tomcat-tutorial
+* So this repo itself is a image. which contains tomcat and war file. Which are added in container.
 
 
 
