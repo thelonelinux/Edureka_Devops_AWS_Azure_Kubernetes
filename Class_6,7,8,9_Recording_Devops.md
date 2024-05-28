@@ -147,6 +147,13 @@
 *  --------------------- END of Lecture 8 ----------------------------------------
 
 ## CLASS 9 RECORDING STARTS
+##### Integration of Docker in Jenkins (In our Pipeline)
+* The whole purpose of learning Docker is so that we can integrate this in our Jenkins Pipeline.
+* So for that integration we will be creating this 3 jobs in jenkins : "addressbookBuildImage", "addressbookPushImage", "addressbookDeployContainer".
+* So we have that Docker file in our github ( https://github.com/htshshrm2/docker-tomcat-tutorial), from there we will create the image and then we will create our container.
+* Also, firstly we need to create Docker Host by exposing docker API/Service in our jenkins.
+* Also need to expose Docker API to TCP. After this add Docker host to jenkins and then create our jobs, addressbookImage and etc.
+* Steps you can find in google Drive
 
 
 
