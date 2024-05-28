@@ -63,7 +63,7 @@
   * But here we are talking about PROD, QA, UAT servers also, which are separate from jenkins servers
   * So that's why we need configuration management tool to address all those servers.
 *
-* --------------------------------  END of CLASS 6 Recording ---------------------------------
+* --------------------------------  END of Lecture 6  ---------------------------------
 
 ### CLASS 7 RECORDING STARTS
 * We will learn how to setup Ansible and in-depth Details
@@ -84,7 +84,7 @@
 
 
 ##### QnA
-* --------------------------------  END of CLASS 7 Recording ---------------------------------
+* --------------------------------  END of Lecture 7  ---------------------------------
 
 ### CLASS 8 RECORDING STARTS
 ##### CONTAINERIZATION  
@@ -133,6 +133,28 @@
  * FROM tomcat COPY addressbook.war .... (like this)
 * There is sample image in sir's github : https://github.com/htshshrm2/docker-tomcat-tutorial
 * So this repo itself is a image. which contains tomcat and war file. Which are added in container.
+* So in Docker file you can see there is tihs same command written.
+* So clone this repo in EC2 commandline only, and then ls, there you will see the container. So now create the image.
+* Do some command to create the image. So now your application is expose to 8080 Port, but not for outside world as it is inside container and not in host.
+* So to do that we need port mapping. Do by some command, see in lecture video.
+
+##### DOCKER CREATE IMAGE AND PUBLISH as ADDRESSBOOK JOB
+* Add Docker plugins, rest see steps in lecture video only.
+* "addressbookBuildImage", "addressbookPushImage", "addressbookDeployContainer".
+* This all jobs in jenkins sir will create and show us later. Right now due to some issue the jobs were not running.
+
+##### QnAs
+*  --------------------- END of Lecture 8 ----------------------------------------
+
+### CLASS 9 RECORDING STARTS
+
+
+
+
+
+
+
+
 
 
 
