@@ -1,22 +1,22 @@
 # Devops Training
-* Don't open Freetier AWS until may end. for threshold is reached and will cost you if you use instance etc.
-* In github also we can create jobs like jenkins, call github actions. You can look about it on youtube internet.
+* Don't open Freetier AWS until May end. for threshold is reached and will cost you if you use instance etc.
+* In GitHub also we can create jobs like jenkins, call github actions. You can look at it on YouTube internet.
 ## CLASS 6 RECORDING AND LEARNING
-* Upto Class 5 and setup of jenkins, job and EC2 check readme.md file
+* Upto Class 5 and setup of Jenkins, job, and EC2 check readme.md file
 #### JENKINS SECURITY
-* Here we will learn about security and stuffs in Jenkins
-* For Security in Jenkins you can check in by goto Manage Jenkins, there you will find security options
+* Here we will learn about security and kinds of stuff in Jenkins
+* For Security in Jenkins you can check in by going to Manage Jenkins, there you will find security options
 * Click on it. There you will see different options for Authentication and Authorization, about who can access that job pipeline and who can do what access like thing.
-* We can chose which users to given what access.
+* We can choose which users to give what access.
 * So to do that, you can create users in Manage Jenkins, Users.
-* Once you create multiple Users, go to Authorization, and there you can see Matrix bases Authorization, which means you can give certain type of access to certain users.
+* Once you create multiple Users, go to Authorization, and there you can see Matrix-based Authorization, which means you can give certain type of access to certain users.
 * Over there Click on Add User and just give him whatever rights you want for them.
-* So when you login to jenkins via those username and password, then you might be able to get only whatever rights you have provided them in Authorizatrion Matrix based.
-* So this is one way to secure your jenkins
-* Authorziation : project based matrix - here we can also give users access to certain projects/ pipeline. so this is also one of security options you have in jenkins
+* So when you log in to jenkins via those username and passwords, then you might be able to get only whatever rights you have provided them in Authorizatrion Matrix based.
+* So this is one way to secure your Jenkins
+* Authorization: project-based matrix - here we can also give users access to certain projects/ pipeline. so this is also one of security options you have in jenkins
 
 ##### JENKINS NOTIFICATION (EMAIL NOTIFICATION)
-* In Jenkins we use plugin Email Extension Plugin to enable email notificiation
+* In Jenkins we use plugin Email Extension Plugin to enable email notification
 * You can see in youtube or in ppt how to setup the attributes. like postBuild email etc.
 
 ##### MASTER SLAVE NODE IN JENKINS
@@ -152,9 +152,33 @@
 * So for that integration we will be creating this 3 jobs in jenkins : "addressbookBuildImage", "addressbookPushImage", "addressbookDeployContainer".
 * So we have that Docker file in our github ( https://github.com/htshshrm2/docker-tomcat-tutorial), from there we will create the image and then we will create our container.
 * Also, firstly we need to create Docker Host by exposing docker API/Service in our jenkins.
-* Also need to expose Docker API to TCP. After this add Docker host to jenkins and then create our jobs, addressbookImage and etc.
-* Steps you can find in google Drive
+* Also need to expose Docker API to TCP. After this add Docker host to jenkins and then create our jobs, addressbookImage and then addressbookcontainer. Becaues we need image to create a container.
+* Steps you can find in google Drive in Docker Jenkins Integration
+* We can communicate Jenkins with docker by exposing it to TCP only which is done by docker API.
+* You can check if docker service is exposed or not using below command.
+* So now goto Jenkins and in manage Jenkins, create the docker cloud.
+* Dockerfile is there in our addressbook github repo also.
+* check videos for more in lecture
 
+##### DOCKER VOLUMES
+* check for more in lecture videos only
+* Copying data from one host to another.
+* Later Kubernetes can be helpful for host managements.
+* Remember in tomcat file we have to create roles there.
+
+##### DOCKER COMPOSE FILE
+
+##### DOCKER SWARM
+* To create clusters of docker host
+* Docker Swarm Nodes  : Manager Node, Leader Node, Worker Nodes
+* docker swarm should not be misused like Kubernetes as it too manage multiple docker host.
+
+##### QnAs
+* *  --------------------- END of Lecture 9 ----------------------------------------
+
+
+## CLASS 10 RECORDING STARTS
+##### 
 
 
 
