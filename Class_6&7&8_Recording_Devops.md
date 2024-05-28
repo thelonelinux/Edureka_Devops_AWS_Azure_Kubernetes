@@ -87,6 +87,39 @@
 * --------------------------------  END of CLASS 7 Recording ---------------------------------
 
 ### CLASS 8 RECORDING STARTS
+##### CONTAINERIZATION  
+* Let's explain by a scenario : Example we have developer whose code is working fine in his local machine, and then now he push the code deployment in dev, or prod.
+* But sometimes what happens, there is some libraries which is specifically required to run the code, Now operations team deploy it, but it fails. so now this becomes a blame game
+* No one will know exactly what happens, this is all because of some version libraries which is required for different environment etc.
+* So we came up with solution that "why not we add package, binaries and libraries along with the code"
+* Previously we were not doing this as binaries and libraries were installed in operating system.
+* So we require OS to install binaries and libraries.
+* But with Containerization we don't need that. There is no OS in Container.
+* Containerization is the process or the procedure to package the binaries and the libraries along with the code. This together is called Image. We can run this image in multiple env.
+* Developers create this Image.
+* Containerization System (Tools) : Docker, Rocket, LXI, Crio, etc.
+* We will learn Docker.
+###### DOCKER
+* Docker is a containerization engine and not container itself.
+* So in a host machine we install Docker and within docker we create containers.
+* Difference between Virtualization (Virtual Machine - Here OS to be installed in host OS to run app) and Containerization (Container - Here it will take Host OS only to run libraries and apps)
+* Also in container Host OS (Kernel is required). So we can have Ubuntu type of Application or Windows type for specific container.
+* Such things can be more usefule for Microservice architecture which nowadays is going on. So here maintenance is easy with container.
+* Docker (Container runtime engine) - CLI is used to maintain container lifecycle
+* Docker Architecture
+ * 1. Docker Client (Docker CLI or Remote API)
+ * 2. Docker Host (Daemon- It's a docker service. Containers images - from docker hub it is cached locally on host)
+ * 3. Docker Registry ( Central Repository - Where we store our Images centrally in docker Hub, here we push the image like github and pull if we require some images)
+* Container Lifecycle : Created, running , paused, start, restart, stop, terminated etc. you know
+* Install docker in EC2 CLI.
+* check commands
+* Getting started with docker and container
+##### DOCKER and Commands and Images and Container and Lifecycle
+* check Later
+* here in this google drive linke you can fine commands : https://drive.google.com/drive/u/0/folders/1oDgzHUOvWaxrvUxn2ntLnGzDQYi2bCpF
+
+* Container are by default stored in Memory only
+
 
 
 
