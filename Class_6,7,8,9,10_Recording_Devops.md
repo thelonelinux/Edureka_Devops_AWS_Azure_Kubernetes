@@ -156,7 +156,7 @@
 * Steps you can find in google Drive in Docker Jenkins Integration
 * We can communicate Jenkins with docker by exposing it to TCP only which is done by docker API.
 * You can check if docker service is exposed or not using below command.
-* So now goto Jenkins and in manage Jenkins, create the docker cloud.
+* So now go to Jenkins and create the docker cloud in manage Jenkins.
 * Dockerfile is there in our addressbook github repo also.
 * check videos for more in lecture
 
@@ -178,7 +178,35 @@
 
 
 ## CLASS 10 RECORDING STARTS
-##### 
+##### DOCKER SWARM
+* Dcoker swarm is an Orchstrator specifically for Docker
+* Orchestrator : When there are multiple Docker Host wihch cootains multiple Container. So to take care of each docker host, you have to move from one cli to other docker host cli.
+ * Hence to Control all these docker host by single means, we need a Orchestrator. hence for docker we have docker Swarm,
+ * We don't need to install anything once docker is there, swarm also gets installed.
+ * docker swarm only supports docker 
+* However in Kubernetes (which is also a orchestrator tool) we can support multi-container runtime engine.
+* So kubernetes is not only limited to Docker. Kubernetes support multiple container engine
+* Also, docker swarm is used in areas with smaller container clusters. so mostly we use Kubernetes only.
+* so now install docker and docker swarm in EC2 (check video lecture)
+* docker commands and swarm commands
+* Docker Swarm : Rollback and update done efficiently in Real time online only for different container.
+##### NAMESPACES 
+* It's a linux feature. Not a container feature
+* it is used to keep process isolated, As containers are also kept isolated using this namespace
+* When a new container is created, a new namespace for htat container is created.
+* In Kubernetes we can decide which container sshould contain which namespace.
+* If the two container have same namespace, then they will share the same environment, like the IP address, Processes, memory etc.
+* So namespaces is used to isolate process in the system.
+##### C-GROUPS
+* Similar to namespace, but here we are not isolating the environment, here we are isolating the resources. Example CPU, RAM.
+* We can specify CPU and RAM for container as per requirement from the host. so it is giving a capability to setup the limit.
+* so how we can do that, see in lecture video for commands. To setup the limits for CPU and RAM.
+
+#### KUBERNETES
+* 
+
+
+
 
 
 
