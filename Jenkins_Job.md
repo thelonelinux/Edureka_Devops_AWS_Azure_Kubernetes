@@ -1,6 +1,7 @@
 # JENKINS JOBS AND SETTINGS (FAST FORWARD)
 
 ## Job Sequence
+#### Always add username password when logging into jenkins as when you get logged off, you can easily login again. Else you won't be able to login again
 ###  1. addressbookCompile
 * STEP 1: In Jenkins Click on (+) => name job as "addressbookCompile" => select freeStyleProject and then submit
 * STEP 2: In the job configuration => add whatever description you like => In git select add this URL : https://github.com/htshshrm2/MyAddressbook.git =>/*Master only
@@ -40,7 +41,7 @@
 * STEP 5: in Build Triggers: Build after another job is built => and add the previous job name after which this job has to be started, so here we add "addressbookMetrictest"
 * And then save it, it will be created.
 * 
-###  7. addressbookTonCatInstall          (Ansible Master/Slave) (PROD, UAT, QA )
+###  7. addressbookTomCatInstall          (Ansible Master/Slave) (PROD, UAT, QA )
 ###  8. addressbookDeployWar              (Ansible) (PROD, UAT, QA )
 ###  9. addressbookBuildImage             (Docker)
 ###  10. addressbookPushImage             (Docker)
