@@ -144,6 +144,15 @@
 * This all jobs in jenkins sir will create and show us later. Right now due to some issue the jobs were not running.
 
 ##### QnAs
+* When to use Ansible and Docker together
+* check link for better understanding (https://www.techtarget.com/searchSoftwareQuality/tip/Compare-Ansible-vs-Docker-use-cases-and-combinations)
+It's possible to use Ansible with Docker to manage more infrastructure. Docker containers offer a way to efficiently build an application, but they require a service to handle their configuration, deployment and orchestration. Ansible is useful for this -- an Ansible playbook can install and configure Docker on the host machine, install a Docker image and run that image as a service.
+
+Cost and customization are the advantages of controlling an application's Docker runtime setup and configuration. Other container tools, such as Fargate, are more costly than running a basic server on premises. When you create your own Ansible playbooks, you also get fuller configurability.
+
+Ansible has a huge advantage over provisioning machines by hand for organizations that don't run applications in the cloud. Using cloud-based tools, such as Fargate, can be compelling, but Ansible and Docker can provide a company with complete control of the server on which their application runs.
+*
+
 *  --------------------- END of Lecture 8 ----------------------------------------
 
 ## CLASS 9 RECORDING STARTS
